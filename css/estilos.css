@@ -11,6 +11,26 @@
     --azul: #157591;
     --azulVerdoso: #17a1a7;
     --aqua: #20dab8;
+
+    /* ELEMENTOS */
+    --normal: #A8A878;
+    --fire: #F08030;
+    --water:#6890F4;
+    --grass: #7DBF4E;
+    --electric: #F2C230;
+    --ice: #98D8D8;
+    --fightn: #BF2A2A;
+    --poseidon: #A444A6;
+    --ground: #E0C068; 
+    --flying: #A890F0;
+    --psychic: #C7455E;
+    --bug: #9BB820;
+    --rock: #B8A036;
+    --ghost: #705898;
+    --dark: #705848;    
+    --dragon: #6038F2;
+    --steel: #B8B8D0;
+    --fairy: #F0B6BC;
 }
 
 /* body{
