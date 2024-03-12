@@ -1,11 +1,19 @@
 /* Fonts */
-@import url();
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Itim&family=Potta+One&display=swap');
 
 /* link de los css */
 @import url();
 @import url();
 
-/* :root{
+:root{
+    --añil: #264971;
+    --añilClaro: #125a7e;
+    --azul: #157591;
+    --azulVerdoso: #17a1a7;
+    --aqua: #20dab8;
+}
 
+/* body{
+    font-family: "Potta One", system-ui;
+    font-family: "Itim", cursive;
 } */
-
