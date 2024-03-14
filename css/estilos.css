@@ -1,16 +1,28 @@
 /* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Itim&family=Potta+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Itim&family=Potta+One&family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
 
 /* link de los css */
+@import url(./main.css);
+@import url(./header.css);
 @import url();
 @import url();
+@import url(./footer.css);
 
+/* Estilos generales */
 :root{
     --añil: #264971;
     --añilClaro: #125a7e;
     --azul: #157591;
     --azulVerdoso: #17a1a7;
     --aqua: #20dab8;
+
+    --verde: #12807c;
+    --azulClaro: #08f5f9;
+    --azulOscuro: #0847ca;
+
+    --negro: #1c1c1c;
+    --gris: #ececec;
+    --blanco: #f7f7f7;
 
     /* ELEMENTOS */
     --normal: #A8A878;
@@ -19,7 +31,7 @@
     --grass: #7DBF4E;
     --electric: #F2C230;
     --ice: #98D8D8;
-    --fightn: #BF2A2A;
+    --fighting: #BF2A2A;
     --poseidon: #A444A6;
     --ground: #E0C068; 
     --flying: #A890F0;
@@ -32,8 +44,13 @@
     --steel: #B8B8D0;
     --fairy: #F0B6BC;
 }
+* {
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    /* font-family: "Potta One", system-ui; */
+}
 
-/* body{
-    font-family: "Potta One", system-ui;
-    font-family: "Itim", cursive;
-} */
+body{
+    background-color: var(--añil);
+    min-height: 100vh;
+}

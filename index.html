@@ -9,12 +9,153 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/estilos.css">
+    <script src="https://kit.fontawesome.com/b9ff11db4e.js" crossorigin="anonymous"></script>
     <title>Pokédex</title>
 </head>
 <body>
-    <main>
+    <header>
+        <nav class="nav">
+            <img class="nav__logo" src="./assets/logo.svg" alt="Logo Pokédex">
+            <div id="elementos__contenedor" class="nav__lista">
+                <li class="nav__item">
+                    <!-- No borrar -->
+                </li> 
+                <li class="nav__item">
+                    <button class="btn__header" id="ver-todos">Ver todos</button>
+                </li> 
+                <li class="nav__item">
+                    <button class="btn__header normal" id="normal">Normal</button>
+                </li>
+                <li class="nav__item">
+                    <button class="btn__header fire" id="fire">Fire</button>
+                </li>
+                <li class="nav__item">
+                    <button class="btn__header water" id="water">Water</button>
+                </li>
+                <li class="nav__item">
+                    <button class="btn__header grass" id="grass">Grass</button>
+                </li>
+                <li class="nav__item">
+                    <button class="btn__header electric" id="electric">Electric</button>
+                </li>
+                <li class="nav__item">
+                    <button class="btn__header ice" id="ice">Ice</button>
+                </li>
+                <li class="nav__item">
+                    <button class="btn__header fighting" id="fighting">Fighting</button>
+                </li>
+                <li class="nav__item">
+                    <button class="btn__header poison" id="poison">Poison</button>
+                </li>
+                <li class="nav__item">
+                    <button class="btn__header ground" id="ground">Ground</button>
+                </li>
+                <li class="nav__item">
+                    <button class="btn__header flying" id="flying">Flying</button>
+                </li>
+                <li class="nav__item">
+                    <button class="btn__header psychic" id="psychic">Psychic</button>
+                </li>
+                <li class="nav__item">
+                    <button class="btn__header bug" id="bug">Bug</button>
+                </li>
+                <li class="nav__item">
+                    <button class="btn__header rock" id="rock">Rock</button>
+                </li>
+                <li class="nav__item">
+                    <button class="btn__header ghost" id="ghost">Ghost</button>
+                </li>
+                <li class="nav__item">
+                    <button class="btn__header dark" id="dark">Dark</button>
+                </li>
+                <li class="nav__item">
+                    <button class="btn__header dragon" id="dragon">Dragon</button>
+                </li>
+                <li class="nav__item">
+                    <button class="btn__header steel" id="steel">Steel</button>
+                </li>
+                <li class="nav__item">
+                    <button class="btn__header fairy" id="fairy">Fairy</button>
+                </li>
+            </div>
 
+            <div class="nav__buscador">
+                <button class="btn__elementos" id="elementos">Elementos</button>
+                <input type="text" id="buscarInput" placeholder="Buscar Pokémon...">
+                <button id="buscarBtn" class="btn__buscador">
+                    <i class="buscador__icon fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    
+
+    <main>
+        <section id="contenedor">
+            <div class="pokemon__contenedor" id="listaPokemon">
+                <!-- <div class="pokemon">
+                    <p class="pokemon__id-back">#025</p>
+                    <div class="pokemon__img">
+                        <img src="" alt="Pikachu">
+                    </div>
+                    <div class="pokemon__info">
+                        <div class="nombre__contenedor">
+                            <p class="pokemon__id">#025</p>
+                            <h2 class="pokemon__nombre">Pikachu</h2>
+                        </div>
+                        <div class="pokemon__tipos">
+                            <p class="electric tipo">ELECTRIC</p>
+                            <p class="fighting tipo">FIGHTING</p>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </section>
     </main>
-    <script src=""></script>
+
+    <footer>
+        <div class="footer__contenedor">
+            <p> <span>2024 ©</span> trabajo realizado por:</p>
+        </div>
+        <ul class="footer__menu"> 
+            <li class="footer__item">
+                <a href="" 
+                class="footer__link" target="_blank">
+                    <img src="./assets/st.jpg" alt="" class="footer__img">
+                    <p class="footer__nombre">Starling D. Rosario Franco</p>
+                    <p class="footer__matricula">(2018-6931)</p>
+                </a>
+            </li>
+            <li class="footer__item">
+                <a href="" 
+                class="footer__link" target="_blank">
+                    <img src="./assets/esme.jpeg" alt="" class="footer__img">
+                    <p class="footer__nombre">Esmeralda Delgado Mejia </p>
+                    <p class="footer__matricula">(2021-2107)</p>
+                </a>
+            </li>
+            <li class="footer__item">
+                <a href="https://www.linkedin.com/in/sammdr/" 
+                class="footer__link" target="_blank">
+                    <img src="./assets/samma.jpeg" alt="" class="footer__img">
+                    <p class="footer__nombre">Samantha F. Díaz Ramírez</p>
+                    <p class="footer__matricula">(2021-2025)</p>
+                </a>
+            </li>
+            <li class="footer__item">
+                <a href="https://www.linkedin.com/in/chamyl-nova/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" 
+                class="footer__link" target="_blank">
+                    <img src="./assets/chamyl.jpeg" alt="" class="footer__img">
+                    <p class="footer__nombre">Chamyl C. Nova Ciprian </p>
+                    <p class="footer__matricula">(2021-2074)</p>
+                </a>
+            </li>
+        </ul>
+    </footer>
+    
+
+    <script src="./js/main.js"></script>
+    <script src="./js/buscador.js"></script>
 </body>
 </html>

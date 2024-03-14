@@ -1,0 +1,232 @@
+header {
+    background-color: var(--azulVerdoso);
+    padding: 10px 20px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo {
+    width: 100px;
+    height: auto;
+}
+
+.nav__buscador {
+    display: flex;
+    align-items: center;
+    font-family: 'Rubik', sans-serif;
+}
+
+.nav__buscador input {
+    padding: 8px;
+    border: none;
+    font-size: 16px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+.nav__buscador .btn__buscador {
+    height: 40px;
+    border: none;
+    background-color: var(--añilClaro);
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0 12px;
+    border-radius: 10px;
+}
+.buscador__icon{
+    color: var(--blanco);
+}
+
+.btn__buscador:hover{
+    background-color: var(--aqua);
+} 
+
+
+/* estilos para el boton para filtrar por elementos. */
+.btn__elementos{
+    margin-right: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--añilClaro);
+    color: var(--blanco);
+    padding: 0.5rem;
+}
+
+.btn__elementos:hover{
+    background-color: var(--verde);
+    cursor: pointer;
+}
+
+/* e */
+#elementos__contenedor .nav__item:nth-child(n+2) {
+    display: none;
+}
+
+#elementos__contenedor .nav__item {
+    display: inline-block;
+    margin-right: 10px; 
+}
+
+#elementos__contenedor {
+    margin-left: 30px; 
+}
+
+
+.nav__lista {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+
+.btn__header {
+    background-color: var(--gris);
+    padding: .5rem;
+    border-radius: 100vmax;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .25);
+    transition: .2s;
+    border: none;
+    font-size: 16px;
+}
+
+
+.btn__header:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 2rem rgba(0, 0, 0, .25);
+}
+
+
+
+/* estilos a los filtros por elementos */
+.normal {
+    background-color: var(--normal);
+    color: var(--blanco);
+}
+
+.fire {
+    background-color: var(--fire);
+    color: var(--negro);
+}
+
+.water {
+    background-color: var(--water);
+    color: var(--blanco);
+}
+
+.grass {
+    background-color: var(--grass);
+    color: var(--negro);
+}
+
+.electric {
+    background-color: var(--electric);
+    color: var(--negro);
+}
+
+.ice {
+    background-color: var(--ice);
+    color: var(--negro);
+}
+
+.fighting {
+    background-color: var(--fighting);
+    color: var(--blanco);
+}
+
+.poison {
+    background-color: var(--poison);
+    color: var(--blanco);
+}
+
+.ground {
+    background-color: var(--ground);
+    color: var(--negro);
+}
+
+.flying {
+    background-color: var(--flying);
+    color: var(--negro);
+}
+
+.psychic {
+    background-color: var(--psychic);
+    color: var(--negro);
+}
+
+.bug {
+    background-color: var(--bug);
+    color: var(--negro);
+}
+
+.rock {
+    background-color: var(--rock);
+    color: var(--negro);
+}
+
+.ghost {
+    background-color: var(--ghost);
+    color: var(--blanco);
+}
+
+.dark {
+    background-color: var(--dark);
+    color: var(--blanco);
+}
+
+.dragon {
+    background-color: var(--dragon);
+    color: var(--blanco);
+}
+
+.steel {
+    background-color: var(--steel);
+    color: var(--negro);
+}
+
+.fairy {
+    background-color: var(--fairy);
+    color: var(--negro);
+}
+
+
+
+/* Media query para dispositivos móviles */
+@media screen and (max-width: 767px) {
+    .nav {
+        flex-direction: column;
+    }
+
+    .nav__logo {
+        margin-bottom: 5px;
+    }
+
+    .nav__buscador {
+        flex-grow: 1; 
+    }
+    
+    .nav__buscador input {
+        flex-grow: 1; 
+    }
+
+    .nav__buscador{
+        margin-bottom: 20px;
+    }
+    
+    .btn__elementos {
+        margin-right: 10px;
+    }
+    
+
+    #elementos__contenedor {
+        margin: 30px 0; 
+    } 
+}
+
+

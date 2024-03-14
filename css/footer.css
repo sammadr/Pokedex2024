@@ -1,0 +1,71 @@
+footer {
+    background-color: var(--aqua);
+    padding: 20px;
+    font-family: "Potta One", system-ui;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.footer__contenedor {
+    margin-bottom: 50px; 
+    color: var(--blanco);
+    text-transform: uppercase;
+}
+
+span{
+    color: var(--azulOscuro);
+}
+
+.footer__menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.footer__item {
+    margin-bottom: 20px;
+}
+
+.footer__link {
+    text-decoration: none;
+    color: var(--azulOscuro);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__img {
+    width: 100px;
+    height: 100px;
+    border: 5px solid var(--verde);
+    border-radius: 30%;
+    margin-bottom: 10px;
+}
+
+.footer__img:hover{
+    transform: scale(1.1);
+    border: 5px solid var(--azulClaro);
+}
+
+.footer__matricula{
+    color: var(--blanco);
+    margin-top: 10px;
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 767px) {
+    .footer__item {
+        flex-basis: 50%; /* Dos elementos por fila */
+    }
+}
+
+/* Estilos para dispositivos de escritorio */
+@media screen and (min-width: 768px) {
+    .footer__item {
+        flex-basis: 25%; /* Cuatro elementos por fila */
+    }
+}
