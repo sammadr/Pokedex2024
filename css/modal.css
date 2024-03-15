@@ -21,6 +21,10 @@
     justify-content: space-between;
   }
 
+  .modal--show{
+    display: block;
+  }
+
   /* Estilos para la parte izquierda del modal, lado de la imagen y los stats básicos */
 
   .basic__props{

@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function()
         const div = document.createElement("div");
         div.classList.add("pokemon");
         div.innerHTML = `
-        <div class="pokemon">
+        <div class="pokemon" >
                     <p class="pokemon__id-back">#${pokemonId}</p>
                     <div class="pokemon__img">
                         <img src="${data.sprites.other["official-artwork"].front_default}" alt="${data.name}">
@@ -44,6 +44,8 @@ document.addEventListener("DOMContentLoaded", function()
                             ${tipos}
                         </div>
                     </div>
+
+                    
         </div>
         `;
         listaPokemones.append(div);
