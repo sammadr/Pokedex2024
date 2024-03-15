@@ -4,7 +4,7 @@
 /* link de los css */
 @import url(./main.css);
 @import url(./header.css);
-@import url();
+@import url(./modal.css);
 @import url();
 @import url(./footer.css);
 
@@ -26,23 +26,23 @@
 
     /* ELEMENTOS */
     --normal: #A8A878;
-    --fire: #F08030;
-    --water:#6890F4;
-    --grass: #7DBF4E;
-    --electric: #F2C230;
-    --ice: #98D8D8;
-    --fighting: #BF2A2A;
-    --poseidon: #A444A6;
-    --ground: #E0C068; 
-    --flying: #A890F0;
-    --psychic: #C7455E;
-    --bug: #9BB820;
-    --rock: #B8A036;
-    --ghost: #705898;
-    --dark: #705848;    
-    --dragon: #6038F2;
+    --fire: #E62829;
+    --water:#2980EF;
+    --grass: #3FA129;
+    --electric: #FAC000;
+    --ice: #3FD8FF;
+    --fighting: #FF8000;
+    --poison: #8F41CB;
+    --ground: #915121; 
+    --flying: #81B9EF;
+    --psychic: #EF4179;
+    --bug: #91A119;
+    --rock: #AFA981;
+    --ghost: #704170;
+    --dark: #50413F;    
+    --dragon: #5061E1;
     --steel: #B8B8D0;
-    --fairy: #F0B6BC;
+    --fairy: #EF71EF;
 }
 * {
     box-sizing: border-box;
