@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/estilos.css">
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/close-o.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/b9ff11db4e.js" crossorigin="anonymous"></script>
     <title>Pokédex</title>
 </head>
@@ -113,8 +114,10 @@
             </div>
         </section>
 
-         <section class="modal">
+         <section class="modal modal__close">
+          
             <div class="modal__container">
+              
                 <article class="basic__props">
                     <div class="stats">
                         <ul class="basic__stats">
@@ -129,21 +132,31 @@
                             </li>
                         </ul>
                     </div>
-                    <img class="pokemon__image" src="assets/lucario.png" alt="Imagen del pokemon">
-                    <h2>Lucario</h2>
+                    <div class="pokeinfo">
+                      <img class="pokemon__image" src="assets/lucario.png" alt="Imagen del pokemon">
+                      <h2>Lucario</h2>
+                    </div>
                 </article>
                 <article class="detail__stats">
+                  <button class="close__button"><i class="gg-close-o"></i></button>
                     <div class="habilidades">
                         <h2>Habilidades</h2>
                         <ul>
                             <li class="habilidad">Patada de rayo</li>
                             <li class="habilidad">Patada de rayo</li>
                             <li class="habilidad">Patada de rayo</li>
-                        </ul>
+                            <li class="habilidad">Patada de rayo</li>
+                            <li class="habilidad">Patada de rayo</li>
+                            <li class="habilidad">Patada de rayo</li>
+                            <li class="habilidad">Patada de rayo</li>
+                            <li class="habilidad">Patada de rayo</li>
+                          </ul>
                     </div>
                     <div class="movimientos">
                         <h2>Movimientos</h2>
                         <ul>
+                            <li class="movimiento">Patada de rayo</li>
+                            <li class="movimiento">Patada de rayo</li>
                             <li class="movimiento">Patada de rayo</li>
                             <li class="movimiento">Patada de rayo</li>
                             <li class="movimiento">Patada de rayo</li>
@@ -155,7 +168,9 @@
                             <li class="evolucion">Patada de rayo</li>
                             <li class="evolucion">Patada de rayo</li>
                             <li class="evolucion">Patada de rayo</li>
-                        </ul>
+                            <li class="evolucion">Patada de rayo</li>
+                            <li class="evolucion">Patada de rayo</li>
+                          </ul>
                     </div>
                 </article>
             </div>

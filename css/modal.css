@@ -1,5 +1,5 @@
 .modal {
-    /* display: none;  */
+    display: none; 
     position: fixed; 
     z-index: 1; 
     left: 0;
@@ -15,7 +15,8 @@
     margin: 15% auto;
     padding: 0px 0px 0px 15px;
     border-radius: 30px;
-    width: fit-content;
+    width: 80%;
+    height: fit-content;
     display: flex;
     justify-content: space-between;
   }
@@ -59,6 +60,13 @@
     height: 20px;
   }
 
+  .pokeinfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+  }
+
   .pokemon__image{
     width: 50%; 
     align-self: center;
@@ -75,10 +83,46 @@
 
   .detail__stats{
     width: 50%;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     background-image: linear-gradient(to top, #646361 10%, #B8B8D0 100%);
+    border-radius: 30px;
+  }
+
+  .close__button{
+    background: none;
+    border: none;
+    align-self: flex-end;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+
+  .close__button:hover{
+    color: var(--fire);
+  }
+
+  .detail__stats h2{
+    font-family: "Potta One", system-ui; 
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .detail__stats ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+
+  .detail__stats li {
+    background-color: white;
+    padding: 10px;
+    border: 2px solid #646361;
     border-radius: 30px;
   }
