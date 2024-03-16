@@ -1,5 +1,6 @@
 header {
     background-color: var(--azulVerdoso);
+    font-family: 'Rubik', sans-serif;
     padding: 10px 20px;
 }
 
@@ -23,9 +24,10 @@ header {
 .nav__buscador input {
     padding: 8px;
     border: none;
-    font-size: 16px;
+    font-size: 12px;
     margin-right: 10px;
     border-radius: 10px;
+    width: 200px;
 }
 
 .nav__buscador .btn__buscador {
@@ -93,7 +95,7 @@ header {
     box-shadow: 0 0 1rem rgba(0, 0, 0, .25);
     transition: .2s;
     border: none;
-    font-size: 13px;
+    font-size: 11px;
 }
 
 
@@ -101,6 +103,8 @@ header {
     transform: scale(1.1);
     box-shadow: 0 0 2rem rgba(0, 0, 0, .25);
 }
+
+/*  */
 
 /* Media query para dispositivos móviles */
 @media screen and (max-width: 767px) {

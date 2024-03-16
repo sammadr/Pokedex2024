@@ -108,7 +108,7 @@ main {
 
 .fire {
     background-color: var(--fire);
-    color: var(--negro);
+    color: var(--blanco);
 }
 
 .water {
@@ -118,17 +118,17 @@ main {
 
 .grass {
     background-color: var(--grass);
-    color: var(--negro);
+    color: var(--blanco);
 }
 
 .electric {
     background-color: var(--electric);
-    color: var(--negro);
+    color: var(--blanco);
 }
 
 .ice {
     background-color: var(--ice);
-    color: var(--negro);
+    color: var(--blanco);
 }
 
 .fighting {
@@ -143,27 +143,27 @@ main {
 
 .ground {
     background-color: var(--ground);
-    color: var(--negro);
+    color: var(--blanco);
 }
 
 .flying {
     background-color: var(--flying);
-    color: var(--negro);
+    color: var(--blanco);
 }
 
 .psychic {
     background-color: var(--psychic);
-    color: var(--negro);
+    color: var(--blanco);
 }
 
 .bug {
     background-color: var(--bug);
-    color: var(--negro);
+    color: var(--blanco);
 }
 
 .rock {
     background-color: var(--rock);
-    color: var(--negro);
+    color: var(--blanco);
 }
 
 .ghost {
@@ -183,10 +183,10 @@ main {
 
 .steel {
     background-color: var(--steel);
-    color: var(--negro);
+    color: var(--blanco);
 }
 
 .fairy {
     background-color: var(--fairy);
-    color: var(--negro);
+    color: var(--blanco);
 }
