@@ -49,6 +49,12 @@ document.addEventListener("DOMContentLoaded", function()
         </div>
         `;
         listaPokemones.append(div);
+
+        const imgPokemon = div.querySelector('.pokemon__img img');
+        imgPokemon.addEventListener('click', function() {
+        const modal = document.querySelector('.modal');
+        modal.classList.add('modal--show');
+    });
     }
 
     menuBotones.forEach(boton => boton.addEventListener("click", (event) => {
