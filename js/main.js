@@ -50,6 +50,7 @@ document.addEventListener("DOMContentLoaded", function()
         `;
         listaPokemones.append(div);
 
+    // Función para poder abrir el modal al darle clic a la imagen del div del pokemon
         const imgPokemon = div.querySelector('.pokemon__img img');
         imgPokemon.addEventListener('click', function() {
         const modal = document.querySelector('.modal');
