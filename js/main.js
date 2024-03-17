@@ -69,17 +69,26 @@ document.addEventListener("DOMContentLoaded", function()
         fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonId}/`)
             .then(response => response.json())
             .then(data => {
+                //Traer valor de HP
                 const hpStat = data.stats.find(stat => stat.stat.name === 'hp');
                 const hpValue = hpStat.base_stat;
+                //Traer valor de ataque
+                const attackStat = data.stats.find(stat => stat.stat.name === 'attack');
+                const attackValue = attackStat.base_stat;
+                //Traer valor de defensa
+                const defenseStat = data.stats.find(stat => stat.stat.name === 'defense');
+                const defenseValue = defenseStat.base_stat;
                 const abilities = data.abilities;
                 const moves = data.moves;
                 const pokemonName = data.name;
                 const speciesUrl = data.species.url;
-                const pokemonImage = data.sprites.front_default;
+                const pokemonImage = data.sprites.other["official-artwork"].front_default;
     
                 // Actualizar los elementos HTML con los datos recuperados
                 document.querySelector('.basic__stats h3').innerHTML = `HP: ${hpValue}`;
-                document.querySelector('.pokeinfo h2').innerHTML = `Nombre del Pokémon: ${pokemonName}`;
+                document.querySelector('#ataque').innerHTML = `Ataque: ${attackValue}`;
+                document.querySelector('#defensa').innerHTML = `Defensa: ${defenseValue}`;
+                document.querySelector('.pokeinfo h2').innerHTML = pokemonName;
                 document.querySelector('.pokemon__image').src = pokemonImage;
     
                 // Actualizar habilidades
