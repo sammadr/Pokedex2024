@@ -164,6 +164,7 @@ document.addEventListener("DOMContentLoaded", function() {
             .then(data => {
                 listaPokemones.innerHTML = "";
                 mostrarPokemon(data);
+                inputId.value = ""; // Limpiar el campo de búsqueda después de mostrar el Pokémon
             })
             .catch(error => {
                 console.error('Se produjo un error al buscar el Pokémon:', error);
