@@ -110,24 +110,36 @@ document.addEventListener("DOMContentLoaded", function() {
                     });
                 }
 
-                fetch(speciesUrl)
-                    .then(response => response.json())
-                    .then(speciesData => {
-                        const evolutionChainUrl = speciesData.evolution_chain.url;
+                //Función para recorrer la propriedad de evoluciones
+                function mostrarTodasEvoluciones(chain, list) {
+                    list.push(chain.species.name);
+                    if (chain.evolves_to.length > 0) {
+                        chain.evolves_to.forEach(evolution => {
+                            mostrarTodasEvoluciones(evolution, list);
+                        });
+                    }
+                }
 
-                        fetch(evolutionChainUrl)
-                            .then(response => response.json())
-                            .then(evolutionData => {
-                                const evolucionesList = document.querySelector('.evoluciones ul');
-                                evolucionesList.innerHTML = evolutionData.chain.evolves_to.map(evolucion => `<li>${evolucion.species.name}</li>`).join('');
-                            })
-                            .catch(error => {
-                                console.error('Se produjo un error al obtener los datos de la cadena de evolución:', error);
-                            });
-                    })
-                    .catch(error => {
-                        console.error('Se produjo un error al obtener los datos de especies:', error);
-                    });
+                //petición a la API para poder traer la información
+                fetch(speciesUrl)
+                .then(response => response.json())
+                .then(speciesData => {
+                    const evolutionChainUrl = speciesData.evolution_chain.url;
+                    fetch(evolutionChainUrl)
+                        .then(response => response.json())
+                        .then(evolutionData => {
+                            const evolucionesList = document.querySelector('.evoluciones ul');
+                            const allEvolutions = [];
+                            mostrarTodasEvoluciones(evolutionData.chain, allEvolutions);
+                            evolucionesList.innerHTML = allEvolutions.map(evolution => `<li>${evolution}</li>`).join('');
+                        })
+                        .catch(error => {
+                            console.error('Se produjo un error al obtener los datos de la cadena de evolución:', error);
+                        });
+                })
+                .catch(error => {
+                    console.error('Se produjo un error al obtener los datos de especies:', error);
+                });
 
             })
             .catch(error => {
