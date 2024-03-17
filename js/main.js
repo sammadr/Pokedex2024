@@ -44,8 +44,6 @@ document.addEventListener("DOMContentLoaded", function()
                             ${tipos}
                         </div>
                     </div>
-
-                    
         </div>
         `;
         listaPokemones.append(div);
