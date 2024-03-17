@@ -48,12 +48,18 @@
     font-size: 1em;
  }
 
+ .pokeinfo h2{
+  text-transform: capitalize;
+ }
+
  .stats__item{
-    width: 20%;
-    background-color: var(--steel);
-    border: 1px solid black;
+    width: 22%;
+    background-color: var(--azul);
+    color: white;
+    font-weight: 500;
+    border: 2.5px solid black;
     border-radius: 10px;
-    padding: 2px;
+    padding: 3px 3px 4px 4px;
     display: flex;
     text-align: center;
     justify-content: center;
@@ -92,12 +98,13 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    background-image: linear-gradient(to top, #646361 10%, #B8B8D0 100%);
+    background-image: linear-gradient(to top, #0847ca 5%, #12807c 100%);
     border-radius: 30px;
   }
 
   .close__button{
     background: none;
+    color: var(--blanco);
     border: none;
     align-self: flex-end;
     cursor: pointer;
@@ -110,6 +117,7 @@
 
   .detail__stats h2{
     font-family: "Potta One", system-ui; 
+    color: white;
     font-size: 1.5rem;
     margin-bottom: 20px;
     text-align: center;
@@ -125,8 +133,21 @@
   }
 
   .detail__stats li {
-    background-color: white;
+    background-color: var(--aqua);
+    color: black;
     padding: 10px;
-    border: 2px solid #646361;
+    border: 2px solid black;
     border-radius: 30px;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+
+  a{
+    color: black;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    background-color: var(--azulClaro);
+    border-radius: 30px;
+    padding: 5px 15px 5px 15px;
   }
