@@ -9,6 +9,8 @@ closeModal.addEventListener('click', ()=>{
 
 //Funciones para poder cambiar los colores del modal
 
+
+
 /*TODO: hacer la función que trae los tipos de la API para poder ponerlo como parámetro en 
 la función CambiarColoresPorTipo*/
 
