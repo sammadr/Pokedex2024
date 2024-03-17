@@ -7,12 +7,16 @@ document.addEventListener("DOMContentLoaded", function() {
     const modal = document.querySelector(".modal__container");
     let URL = "https://pokeapi.co/api/v2/pokemon/";
 
-    for (let i = 1; i <= 300 ; i++) {
-        fetch(URL + i)
-        .then((response) => response.json())
-        .then(data => mostrarPokemon(data))
-        .catch((error) => casoError(error));
+    function cargarTodosLosPokemon() {
+        for (let i = 1; i <= 300 ; i++) {
+            fetch(URL + i)
+            .then((response) => response.json())
+            .then(data => mostrarPokemon(data))
+            .catch((error) => casoError(error));
+        }
     }
+
+    cargarTodosLosPokemon();
 
     function mostrarPokemon(data) {
         let tipos = data.types.map((type) =>  
@@ -45,7 +49,6 @@ document.addEventListener("DOMContentLoaded", function() {
             </div>   
         </div>
         `;
-
         listaPokemones.append(div);
 
         const imgPokemon = div.querySelector('.pokemon__img img');
@@ -147,25 +150,55 @@ document.addEventListener("DOMContentLoaded", function() {
             });
     }
 
+    function buscarPokemon() {
+        const searchTerm = inputId.value.trim().toLowerCase();
+        if (!searchTerm) return; // No busca si el campo está vacío
+
+        fetch(`${URL}${searchTerm}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('No se encontró el Pokémon.');
+                }
+                return response.json();
+            })
+            .then(data => {
+                listaPokemones.innerHTML = "";
+                mostrarPokemon(data);
+            })
+            .catch(error => {
+                console.error('Se produjo un error al buscar el Pokémon:', error);
+            });
+    }
+
+    btnBuscar.addEventListener("click", buscarPokemon);
+
+    inputId.addEventListener("keypress", (event) => {
+        if (event.key === "Enter") {
+            buscarPokemon();
+        }
+    });
+
     menuBotones.forEach(boton => boton.addEventListener("click", (event) => {
         const botonId = event.currentTarget.id;
         listaPokemones.innerHTML = "";
 
-        for (let i = 1; i <= 300 ; i++) {
-            fetch(URL + i)
-            .then((response) => response.json())
-            .then(data => {
-
-                if(botonId === "ver-todos") {
-                    mostrarPokemon(data);
-                } else {
+        if (botonId === "ver-todos") {
+            cargarTodosLosPokemon();
+        } else {
+            for (let i = 1; i <= 300 ; i++) {
+                fetch(URL + i)
+                .then((response) => response.json())
+                .then(data => {
                     const tipos = data.types.map(type => type.type.name);
                     if (tipos.some(tipo => tipo.includes(botonId))) {
                         mostrarPokemon(data);
                     }
-                }
-                
-            })
+                })
+                .catch((error) => {
+                    console.error('Se produjo un error al filtrar por tipo:', error);
+                });
+            }
         }
     }));
 });
+
